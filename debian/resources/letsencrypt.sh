@@ -23,7 +23,7 @@ read -p 'Domain Name: ' domain_name
 read -p 'Email Address: ' email_address
 
 #get and install dehydrated
-cd /usr/src && git clone https://github.com/lukas2511/dehydrated.git
+cd /usr/src && git clone https://github.com.cnpmjs.org/dehydrated-io/dehydrated.git
 cd /usr/src/dehydrated
 cp dehydrated /usr/local/sbin
 mkdir -p /var/www/dehydrated
@@ -45,7 +45,7 @@ fi
 #manual dns hook
 if [ .$wildcard_domain = ."true" ]; then
     cd /usr/src
-    git clone https://github.com/gheja/dns-01-manual.git
+    git clone https://github.com.cnpmjs.org/gheja/dns-01-manual.git
     cd /usr/src/dns-01-manual/
     cp hook.sh /etc/dehydrated/hook.sh
     chmod 755 /etc/dehydrated/hook.sh
